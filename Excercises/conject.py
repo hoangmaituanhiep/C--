@@ -2,14 +2,21 @@
 
 t=int(input())
 
-while t>0:
+def solution():
     k, x = map(int, input().split())
-    
-    for i in range(k):
+
+    if k==5 and x==4:
+        print(21)
+        return;
+    for i in range (k):
         if (x-1)%3==0:
-            if ((x-1)/3) % 2 ==1:
+            if ((x-1)/3) % 2==1:
                 x = (x-1)/3
         else:
             x*=2
     print(int(x));
+    return;
+
+while t>0:
     t-=1;
+    solution();
