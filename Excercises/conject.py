@@ -11,5 +11,5 @@ while t>0:
                 x = (x-1)/3
         else:
             x*=2
-    print(x);
+    print(int(x));
     t-=1;
