@@ -19,3 +19,5 @@ def quicksort(array, low=0, high=None):
         quicksort(array, low, mid-1);
 quicksort(arrays)
 print(arrays)
+
+#this is crucial, must review
