@@ -8,7 +8,7 @@
     },
     "styles": [{}, {}, {}],
     // Local images can be dragged into the browser to quickly get the file protocol address from the address bar
-    "images": ["https://pathtoimage.png", "./background.png"],
+    "images": ["https://pathtoimage.png", "file:///C:/Users/hoang/Documents/C++/background.png"],
     "interval": 0,
     "random": false
   }

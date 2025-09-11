@@ -6,10 +6,11 @@ using namespace std;
 
 //https://codeforces.com/problemset/problem/1185/A
 
-ll check(ll x, ll y, ll k,ll &tempt){
+ll check(ll &x, ll &y, ll k,ll &tempt){
     if (abs(x-y) <k){
         ++tempt;
-        return check(x, y+1, k, tempt);
+        ++y;
+        return check(x, y, k, tempt);
     }
     return 0;
 }
