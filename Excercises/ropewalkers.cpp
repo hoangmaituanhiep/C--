@@ -6,17 +6,21 @@ using namespace std;
 
 //https://codeforces.com/problemset/problem/1185/A
 
+ll check(ll x, ll y, ll k,ll &tempt){
+    if (abs(x-y) <k){
+        ++tempt;
+        return check(x, y+1, k, tempt);
+    }
+    return 0;
+}
+
 int main(){
     init
     ll a,b,c,d; cin>>a>>b>>c>>d;
-    ll tempt1 = abs(c-a);
-    ll tempt2 = abs(c-b);
-
     ll tempt=0;
-
-    if (tempt1 < d) tempt+= d-tempt1;
-    if (tempt2 < d) tempt+= d- tempt2;
-
+    check(a, b, d, tempt);
+    check(a, c, d, tempt);
+    check(b,c,d,tempt);
     cout<<tempt;
     return 0;
 }
