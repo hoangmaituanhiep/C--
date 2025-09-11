@@ -7,8 +7,9 @@ ll partition(vector<ll> &array,ll low,ll high){
     ll pivot = array[high];
     ll index=low;
 
-    for (ll i= low; i<=high; ++i){
+    for (ll i= low; i<high; ++i){
         if (array[i]<=pivot){
+            swap(array[i],  array[index]);
             ++index;
         }
     }
