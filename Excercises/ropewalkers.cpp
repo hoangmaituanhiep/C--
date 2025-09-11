@@ -21,7 +21,6 @@ int main(){
     ll tempt=0;
     check(a, b, d, tempt);
     check(a, c, d, tempt);
-    check(b,c,d,tempt);
     cout<<tempt;
     return 0;
 }
