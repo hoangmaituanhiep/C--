@@ -6,23 +6,18 @@ using namespace std;
 
 //https://codeforces.com/problemset/problem/1185/A
 
-ll check(ll &x, ll &y, ll k,ll &tempt){
-    if (abs(x-y) <k){
-        ++tempt;
-        ++y;
-        return check(x, y, k, tempt);
-    }
-    return 0;
-}
 
 int main(){
     init
     ll a,b,c,d; cin>>a>>b>>c>>d;
-    ll t = min(min(a,b),c);
+    vector<ll> arr = {a, b, c};
+    sort(arr.begin(), arr.end());
+
     ll tempt=0;
-    check(a, b, d, tempt);
-    check(b, c, d, tempt);
-    check(c, a, d, tempt);
-    cout<<tempt;
+
+    if (arr[2] - arr[1] < d) tempt += d - arr[2] + arr[1];
+    if (arr[1] - arr[0] < d) tempt += d - arr[1] + arr[0];
+    
+    cout<< tempt;
     return 0;
 }
