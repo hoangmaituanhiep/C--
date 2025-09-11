@@ -3,7 +3,7 @@ using namespace std;
 #define ll long long
 #define init ios_base::sync_with_stdio(0);cin.tie(0);cout.tie(0);
 
-ll partition(vector<ll> array,ll low,ll high){
+ll partition(vector<ll> &array,ll low,ll high){
     ll pivot = array[high];
     ll index=low;
 
@@ -12,13 +12,10 @@ ll partition(vector<ll> array,ll low,ll high){
             ++index;
         }
     }
-    array[index] = array[index] ^ array[high];
-    array[high] = array[index] ^ array[high];
-    array[index] = array[index] ^ array[high];
+    swap(array[index], array[high]);
     return index;
 }
-
-void quicksort(vector<ll> array, ll low, ll high){
+void quicksort(vector<ll> &array, ll low, ll high){
     if (low< high){
         ll mid = partition(array, low, high);
         quicksort(array, mid+1, high);
