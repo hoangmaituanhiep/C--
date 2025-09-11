@@ -7,7 +7,6 @@ using namespace std;
 //https://codeforces.com/problemset/problem/1185/A
 
 ll check(ll &x, ll &y, ll k,ll &tempt){
-    if (x==y) return 0;
     if (abs(x-y) <k){
         ++tempt;
         ++y;
@@ -21,9 +20,9 @@ int main(){
     ll a,b,c,d; cin>>a>>b>>c>>d;
     ll t = min(min(a,b),c);
     ll tempt=0;
-    check(a, t, d, tempt);
-    check(b, t, d, tempt);
-    check(c, t, d, tempt);
+    check(a, b, d, tempt);
+    check(b, c, d, tempt);
+    check(c, a, d, tempt);
     cout<<tempt;
     return 0;
 }
