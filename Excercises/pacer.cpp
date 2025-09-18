@@ -12,7 +12,9 @@ int main(){
 
     while(t--){
         ll n,m; cin>>n>>m;
-        vector <ll> a(n), b(n); for (ll i=0; i<n; ++i) cin>> a[i]>>b[i];
+        vector <ll> a(n), b(n);
+        a[0] = 0;
+        for (ll i=1; i<=n; ++i) cin>> a[i]>>b[i];
 
         ll dem=0;
 
