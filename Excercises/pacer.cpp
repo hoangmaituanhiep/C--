@@ -13,6 +13,8 @@ int main(){
     while(t--){
         ll n,m; cin>>n>>m;
         vector <ll> a(n), b(n); for (ll i=0; i<n; ++i) cin>> a[i]>>b[i];
+
+        ll dem = m - a[n-1];
     }
     return 0;
 }
