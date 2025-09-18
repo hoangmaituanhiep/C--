@@ -8,5 +8,12 @@ using namespace std;
 
 int main(){
     init
+    int t; cin>>t;
+    while(t--){
+        ll n,m,x,y; cin>>n>>m>>x>>y;
+        vector<ll> a(n), b(m);
+        for (ll i = 0; i<n; ++i) cin>>a[i];
+        for (ll i=0; i <m; ++i) cin>>b[i];
+    }
     return 0;
 }
