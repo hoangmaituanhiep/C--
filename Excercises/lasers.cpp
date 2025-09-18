@@ -15,7 +15,7 @@ int main(){
         for (ll i = 0; i<n; ++i) cin>>a[i];
         for (ll i=0; i <m; ++i) cin>>b[i];
 
-        cout<<m+n;
+        cout<<m+n<<'\n';
     }
     return 0;
 }
