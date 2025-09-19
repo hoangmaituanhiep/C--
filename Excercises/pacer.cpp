@@ -19,9 +19,12 @@ int main(){
         ll dem=0;
         ll index=0;
 
-        dem += m-a[n-1];
-        while (m=m-a[index] && index + 1 <=n){
-            if ((a[index+1] - a[index])%2 == (abs(b[index+1] - b[index]))){
+        dem += m-a[n];
+        while (index + 1 <=n){
+
+            ll times = a[index+1] - a[index];
+            ll sides = abs(b[index+1] - b[index]);
+            if ( (times%2) == (sides%2) ){
                 dem+= a[index+1] - a[index];
                 }
             else{
