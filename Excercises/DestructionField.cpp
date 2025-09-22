@@ -26,23 +26,26 @@ int main(){
             }
         }
 
-        sort(a.begin(), a.end());
-        if (a[n-1] % 2 == 1){
+        sort(a.begin(), a.end(), greater<ll>());
+        for (ll i = n - 1; i>=0; i--)
+            if (a[i] == 0) a.pop_back();
+        if (!a.empty() && a[0] % 2 != 0){
             active = true;
-            dem += a[n-1] + even;
-            for (ll i = 0; i<n-1; ++i){
-                if (a[i]==0) continue;
-                if (a[i] != 0 && active == true){
-                    active = false;
-                    continue;
-                }
-                else if (a[i] !=0 && active == false){
-                    active = true;
-                    dem += a[i];
-                }
+            dem += a[0] + even;
+            ll tempt_index = (a.size())/2;
+
+            if (a.size() % 2 == 0){
+                for (ll i = 1; i < tempt_index; ++i){
+                    dem+=a[i];
+                } // 0 0 0 0 0 0
             }
+            else{
+                for (ll i = 1; i <= tempt_index; ++i){
+                    dem+=a[i];
+                } // 0 0 0 0 0
             }
-            cout<<dem<<'\n';
         }
+        cout<<dem<<'\n';
+    }
     return 0;
 }
