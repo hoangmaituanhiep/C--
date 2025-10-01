@@ -1,6 +1,6 @@
 Python UET/
 
-.exe
+*.exe
 
 .virtual_documents/
 # Byte-compiled / optimized / DLL files
