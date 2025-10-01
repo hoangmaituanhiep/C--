@@ -19,16 +19,16 @@ class Stack{
         }
 
         void pop(){
-            if (isEmpty()){
-                cout<<'\nStack is empty!';
+            if (top==0){
+                //
             }
             else{
                 --top;
             }
         }
         void peek(){
-            if (isEmpty()){
-                cout<<'\nStack is empty!';
+            if (top==0){
+                //
             }
             else{
                 cout<<'\n'<<stack[top];
@@ -38,5 +38,7 @@ class Stack{
 
 int main() {
     init
+    Stack new_stack;
+    new_stack.peek();
     return 0;
 }
