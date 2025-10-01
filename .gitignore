@@ -220,3 +220,4 @@ __marimo__/
 # Streamlit
 .streamlit/secrets.toml
 Excercises/random_problems.cpp
+.vscode/tasks.json

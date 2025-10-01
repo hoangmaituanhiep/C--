@@ -4,12 +4,9 @@ using namespace std;
 #define ll long long
 #define init ios_base::sync_with_stdio(0);cin.tie(nullptr);cout.tie(0);
 
-//https://codeforces.com/contest/2149/problem/B
+//https://marisaoj.com/problem/346
 
 int main(){
     init
-    ll n; int m;
-    cin>>n>>m;
-    
     return 0;
 }
