@@ -4,19 +4,6 @@ using namespace std;
 #define ll long long
 #define init ios_base::sync_with_stdio(0);cin.tie(nullptr);cout.tie(0);
 
-//Optimze IO operations
-const auto _ = std::cin.tie(nullptr)->sync_with_stdio(false);
-
-#define LC_HACK 
-const auto __ = []() {
-    struct ___ {
-        static void _() { std::ofstream("display_runtime.txt") << 0 << '\n'; }
-    };
-    std::atexit(&___::_);
-    return 0;
-}();
-
-
 //                       _oo0oo_
 //                      o8888888o
 //                      88" . "88
