@@ -28,18 +28,23 @@ using namespace std;
 //             ~Peace in mind, peace in files~
 //             ===============================
 
-//Start coding
+//Start coding here
 
 int main(){
     init
 
-    int x,y,m; cin>>x>>y>>m;
+    int n; cin>>n;
+    vector<int> a(n);
+    for (int i=0; i<n; ++i) cin>>a[i];
+    float ans = 0;
 
-    int up = x*y + x + y + 1;
-    int down = m + 1;
+    sort(a.begin(), a.end());
 
-    int N = up/down -1;
+    for (int i=0; i<n-1; ++i){
+        int tempt = (a[i+1] - a[i]);
+        ans += sqrt(tempt*tempt+1);
+    }
 
-    cout<<N;
+    cout<<fixed<<setprecision(6)<<ans;
     return 0;
 }
