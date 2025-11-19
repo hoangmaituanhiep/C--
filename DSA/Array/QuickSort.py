@@ -21,4 +21,4 @@ def quicksort(array, low=0, high=None):
 quicksort(arrays)
 print(arrays)
 
-#this is crucial, must review
+#reviews completed, now it's time to read and learn
