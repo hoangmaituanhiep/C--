@@ -34,45 +34,23 @@ using namespace std;
 
 //Start coding
 
+void an(string &s){
+    ll n = s.size();
+    if (n == 1 && s == "A"){
+        cout<<"YES"<<' ';
+    };
+    else if (n>1){
+        for (ll i = 0; i<n-1; ++i){
+            if (s[i+1] == 'B'){
+                an(s.erase(i+1,1))
+            }
+            if (s[i+1] == '')
+        }
+    }
+}
+
 int main(){
     init
 
-    ll n;
-    vector<ll> h(n), v(n);
-    for(ll i=0; i<n; ++i) cin>>h[i];
-    for(ll i=0; i<n; ++i) cin>>v[i];
-
-    ll var[n];
-    ll count[n];
-
-    for (ll i=0; i<n; ++i){
-        var[i] = v[i];
-        count[i] = 1;
-        for (ll j=0; j<n; ++j){
-            if (h[j] < h[i]){
-                if (var[j] + v[i] > var[i]){
-                    var[i] = var[j] + v[i];
-                    count[i] = count[j] + 1;
-                }
-                if (var[j] + v[i] == var[i]){
-                    count[i] = max(count[i], count[j] + 1);
-                }
-            }
-        }
-
-        ll max_var = var[0];
-        ll max_c = count[0];
-
-        for (int i=0; i<n; ++i){
-            if (var[i] > max_var){
-                max_var = var[i];
-                max_c = count[i];
-            }
-            if (var[i] == max_var && count[i] > max_c){
-                max_c = count[i];
-            }
-        }
-        cout<<max_var<<' '<<max_c;
-    }
     return 0;
 }
