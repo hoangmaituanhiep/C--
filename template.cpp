@@ -37,5 +37,9 @@ using namespace std;
 int main(){
     init
 
+    ll t; cin>>t;
+    while (t--) {
+        
+    }
     return 0;
 }
