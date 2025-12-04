@@ -3,13 +3,15 @@ from math import isqrt
 def JS(array, k):
     n = len(array)
     step = isqrt(n)
+    pre = 0
 
-    for i in range(0, n-step, step):
-        if array[i] <= k < array[i+step]:
-            for j in range(i, i+step+1):
-                if array[j] == k:
-                    return j
+    while (array[min(n, pre)-1] < k):
+        pre += step
+        if pre>=n:
             return -1
+    for i in range(pre,pre-step-1, -1): #since pre is obviously higher than index of k
+        if array[i] == k:
+            return i+n #This return backward index so add the size to return forward index
     return -1
 
 arr = [2,3,4,10,40]
