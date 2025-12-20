@@ -30,27 +30,20 @@ using namespace std;
 //             ~Peace in mind, peace in files~
 //             ===============================
 
-
-
 //Start coding
 
-void an(string &s){
-    ll n = s.size();
-    if (n == 1 && s == "A"){
-        cout<<"YES"<<' ';
-    };
-    else if (n>1){
-        for (ll i = 0; i<n-1; ++i){
-            if (s[i+1] == 'B'){
-                an(s.erase(i+1,1))
-            }
-            if (s[i+1] == '')
-        }
-    }
-}
 
 int main(){
     init
+    int t; cin>>t;
 
+    while(t--){
+        ll a,b; cin>>a>>b;
+
+        if (b%2 == 1) cout<<"Minh 11"<<'\n';
+        else{
+            cout<<"Thanh"<<'\n';
+        }
+    }
     return 0;
 }
