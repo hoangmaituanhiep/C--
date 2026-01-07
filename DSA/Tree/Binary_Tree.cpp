@@ -31,5 +31,18 @@ class TreeNode{
 
 
 int main(){
+    init
+
+    TreeNode *root = new TreeNode(0);
+    TreeNode *first = new TreeNode(1);
+    TreeNode *second = new TreeNode(2);
+    TreeNode *third = new TreeNode(3);
+    //Create new nodes
+
+    root -> left = first;
+    root -> right = second;
+    first -> left = third;
+    //Connect tree nodes
+
     return 0;
 }
