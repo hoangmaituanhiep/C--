@@ -32,15 +32,23 @@ using namespace std;
 
 //Start coding
 
-
-
 int main(){
     init
-    int t; cin>>t;
+    ll a,b; cin>>a>>b;
 
-    while(t--){
-        ll n; cin>>n;
-        
+    int step = 0;
+    while (step<69){
+        if (a/b < 1) a*=10;
+
+        a = a%b;
+
+        step++;
     }
+
+    if (a/b < 1) a*=10;
+    cout<< (int) a/b;
+
+    
+
     return 0;
 }
