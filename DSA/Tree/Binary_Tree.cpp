@@ -28,7 +28,33 @@ class TreeNode{
         }
 };
 
+/*
+There are 3 main operations on a tree:
+    - Traverse
+    - Search
+    - Insertion and Deletion
+*/
 
+/*
+To traverse through a tree, there are two methods:
+    - Breadth First Search (BFS): visit nodes on the same level first
+    - Depth First Search (DFS): moves each branch by branch
+        There are three ways to DFS:
+            + pre-order
+            + in-order
+            + post-order
+*/
+
+void dfs(TreeNode *root){
+    if (root == nullptr){
+        return;
+    }
+
+    cout<<root -> data<<' ';
+
+    dfs(root -> left);
+    dfs(root -> right);
+}
 
 int main(){
     init
@@ -43,6 +69,8 @@ int main(){
     root -> right = second;
     first -> left = third;
     //Connect tree nodes
+
+    dfs(root);
 
     return 0;
 }
