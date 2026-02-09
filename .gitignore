@@ -228,5 +228,4 @@ DSA.pdf
 Exercises/random_problem.py
 Exercises/random_problems.cpp
 Exercises/random_problems.cpp
-OOP/oop.class
-OOP/temp.class
+OOP/*.class
