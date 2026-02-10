@@ -1,7 +1,7 @@
 public class oop {
     private static int limit = 6;
-    String user_name;
-    int tokens;
+    private String user_name;
+    private int tokens;
     private final static int bottom_iq = 6; //Final is like const
 
     public oop(int new_limit) {
@@ -11,10 +11,13 @@ public class oop {
     }
 
     public oop(String user_name, int tokens){
+        System.out.println("Name: "+user_name+"\tTokens: "+tokens);
+    }
+
+    public void set_info(String user_name, int tokens){
         this.user_name = user_name;
         this.tokens = tokens;
     }
-
     public void get_info(){
         System.out.println("\nName: " + user_name);
         System.out.println("Tokens poccessing: " + tokens + '\n');
@@ -27,7 +30,6 @@ public class oop {
         //Tests from other file
         user.IQ_assess(limit);
         oop obj = new oop(bottom_iq);
-        obj.get_info();
         user.func_call(obj.tokens);
 
         //Test abstract from other file

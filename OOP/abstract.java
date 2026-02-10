@@ -19,4 +19,12 @@ class User extends Main {
             System.out.println("Such Stupidity!");
         }
     }
+
+    //Test Encapsulation
+    oop change = new oop(time);
+    {
+        change.set_info("Abstraction", 5);
+        change.get_info();
+    }
+
 }
