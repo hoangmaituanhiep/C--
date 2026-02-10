@@ -2,7 +2,7 @@ public class oop {
     private static int limit = 6;
     String user_name;
     int tokens;
-    private final int bottom_iq = 6; //Final is like const
+    private final static int bottom_iq = 6; //Final is like const
 
     public oop(int new_limit) {
         oop.limit = new_limit;
@@ -26,7 +26,7 @@ public class oop {
 
         //Tests from other file
         user.IQ_assess(limit);
-        oop obj = new oop(10);
+        oop obj = new oop(bottom_iq);
         obj.get_info();
         user.func_call(obj.tokens);
 

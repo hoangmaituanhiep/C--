@@ -4,6 +4,10 @@ abstract class Main {
     public abstract void performance();
 }
 
+//transient: attributes and methods are skipped when serializing object
+//synchronized: methods can only be accessed by one thread at a time
+//volatile: The value of an attribute is not cached thread-locally, and is read from main memory
+
 class User extends Main {
     public int time = 7;
 
