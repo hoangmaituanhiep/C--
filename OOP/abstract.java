@@ -1,30 +1,34 @@
+import java.util.Scanner;
+
 abstract class Main {
     public String group;
-    public int education;
-    protected int age = 16;
-    public abstract void performance();
+    public int result;
 }
 
 //transient: attributes and methods are skipped when serializing object
 //synchronized: methods can only be accessed by one thread at a time
 //volatile: The value of an attribute is not cached thread-locally, and is read from main memory
 
-class User extends Main {
-    public int time = 7;
+class Comp extends Main {
+    String group = "computer";
+    private long time = System.nanoTime();
+    private int rolling;
 
-    public void performance(){
-        if (education > time){
-            System.out.println("Excellent!");
-        }
-        else{
-            System.out.println("Such Stupidity!");
-        }
+    Comp(){
+        rolling = (int) (time%3);
     }
 
-    //Test Encapsulation
-    oop change = new oop(time);
-    {
-        change.set_info("Abstraction", 5);
-        change.get_info();
+    public int result = rolling-1;
+}
+
+class Player extends Main {
+    String group = "player";
+    int choice;
+
+    public void make_choice(){
+        System.out.println("Make your choice: ");
+        choice = oop.inp.nextInt();
+        oop.inp.nextLine();
+        result = choice%3 - 1;
     }
 }

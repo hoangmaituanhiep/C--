@@ -1,42 +1,63 @@
+import java.util.Scanner;
+
 public class oop {
-    private static int limit = 6;
-    private String user_name;
-    private int tokens;
-    private final static int bottom_iq = 6; //Final is like const
+    private static boolean outcome = false;
+    final static Scanner inp = new Scanner(System.in);
+    public static int turn(){
+        long time = System.nanoTime();
 
-    public oop(int new_limit) {
-        oop.limit = new_limit;
-
-        this("Gay Gun", 10);
+        return (int) time%2;
     }
+    public static void new_game(){
+        System.out.println("\nWana continue? Y/N");
+        String player_choice = inp.nextLine().trim();
 
-    public oop(String user_name, int tokens){
-        System.out.println("Name: "+user_name+"\tTokens: "+tokens);
-    }
-
-    public void set_info(String user_name, int tokens){
-        this.user_name = user_name;
-        this.tokens = tokens;
-    }
-    public void get_info(){
-        System.out.println("\nName: " + user_name);
-        System.out.println("Tokens poccessing: " + tokens + '\n');
+        if (!player_choice.equals("Y")){
+            outcome = true;
+            System.out.println("Okay, Goodbye!");
+        }
     }
 
     public static void main(String[] args){
-        subtemp user = new subtemp();
-        User first = new User();
+        while (!outcome) {
+            System.out.println("\n1 is Scissor.\n0 is Rock.\n-1 is Paper.");
+            int turn = turn();
+            Comp computer = new Comp();
+            Player player = new Player(); 
 
-        //Tests from other file
-        user.IQ_assess(limit);
-        oop obj = new oop(bottom_iq);
-        user.func_call(obj.tokens);
+            if (turn == 0){
+                System.out.println("Computer go first!");
+                System.out.println("Now, your turn: ");
+                player.make_choice(); 
+            }
+            else{
+                System.out.println("You go first!");
+                player.make_choice();
+                System.out.println("Now, it's computer's turn!");
+            }
 
-        //Test abstract from other file
-        first.education = 9;
-        first.group = "Student";
+            System.out.println("Your choice is " + player.result);
+            System.out.println("Computer's choice is " + computer.result + "\n");
 
-        System.out.println("\nOccupation: " + first.group);
-        first.performance();
+            if (player.result == computer.result){
+                    System.out.println("===> Draw...");
+                }
+                else if (player.result == -1 && computer.result == 1){
+                    System.out.println("===> You lose!");
+                }
+                else if (player.result == 0 && computer.result == -1){
+                    System.out.println("===> You lose!");
+                }
+                else if (player.result == 1 && computer.result == 0){
+                    System.out.println("===> You lose!");
+                }
+                else {
+                    System.out.println("===> You Win!!!");
+                }
+
+                outcome = false;
+
+                new_game();
+        }
     }
 }
