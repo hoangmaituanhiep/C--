@@ -1,6 +1,7 @@
 abstract class Main {
     public String group;
     public int education;
+    protected int age = 16;
     public abstract void performance();
 }
 
@@ -26,5 +27,4 @@ class User extends Main {
         change.set_info("Abstraction", 5);
         change.get_info();
     }
-
 }

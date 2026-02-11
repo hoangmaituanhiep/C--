@@ -21,3 +21,12 @@ public class temp {
         }
     }
 }
+
+//Learning Inheritance, Polymorphism, 'super'
+class subtemp extends temp{
+    public void IQ_assess(int nums){
+        System.out.println("You think you're smart?");
+        super.IQ_assess(nums);
+        super.func_call(nums);
+    }
+}

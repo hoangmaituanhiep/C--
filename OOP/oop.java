@@ -24,7 +24,7 @@ public class oop {
     }
 
     public static void main(String[] args){
-        temp user = new temp();
+        subtemp user = new subtemp();
         User first = new User();
 
         //Tests from other file
