@@ -219,13 +219,10 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
-Excercises/random_problems.cpp
 .vscode/tasks.json
 Python UET/HoangMaiTuanHiep_25021756_TDTT
 .vscode/settings.json
-1762188103937.pdf
 DSA.pdf
 Exercises/random_problem.py
-Exercises/random_problems.cpp
 Exercises/random_problems.cpp
 OOP/*.class
