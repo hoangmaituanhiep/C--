@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 abstract class Main {
     public String group;
     public int result;
